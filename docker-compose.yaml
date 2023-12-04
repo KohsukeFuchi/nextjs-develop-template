@@ -1,0 +1,18 @@
+version: '3'
+
+volumes:
+  node-modules-volume:
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+    container_name: 'nextjs-develop-template'
+    volumes:
+      - ./container:/home/web
+      - node-modules-volume:/home/web/node_modules
+    tty:
+      true
+    ports:
+      - 3003:3000
+      - 6006:6006
