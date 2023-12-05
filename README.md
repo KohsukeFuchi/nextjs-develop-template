@@ -77,3 +77,71 @@ $ pnpm add --save-dev @storybook/addon-styling
 $ pnpm addon-styling-setup
 ```
 
+## Dockerで環境構築
+
+リポジトリをCloneする。
+
+```shell
+# ビルド
+docker-compose build
+
+# Dockerスタート
+docker-compose up -d
+```
+
+## 各種コマンド
+
+### Next.jsの開発モード実行
+
+```
+yarn next dev
+```
+
+### Next.jsのビルド
+
+```
+yarn next build
+```
+
+### Next.jsの本番サーバ起動
+
+```
+yarn next start
+```
+
+### Next.jsに組み込まれたESLint
+
+```
+yarn next lint
+```
+
+### ESLint fix
+
+```
+yarn next lint:fix
+```
+
+### Prettierによる整形
+
+```
+yarn format
+```
+
+### Storybook起動
+
+```
+yarn storybook
+```
+
+### Storybookのデプロイ
+
+```
+yarn build-storybook
+```
+
+### Jestでテストする時
+
+```
+yarn test
+```
+
